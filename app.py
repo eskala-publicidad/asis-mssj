@@ -5,7 +5,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 # Estas variables las configuraremos después en el Dashboard de Render
-VERIFY_TOKEN = os.environ.get('asistente-bot')
+VERIFY_TOKEN = os.environ.get('asistentebot')
 PAGE_ACCESS_TOKEN = os.environ.get('EAF3rwwkvkksBQ8PSsMeQXZC5TpaZCnFf3wH5HDKtf7OQsSBAsZAVPh4NfmGZB9UZAj1dQAbyIkgt6ZCgisvr56JITa0aPgC3lXdgBKZBy5DYSRwBJmho8QDUZCc2wON4mWtkoZB7yKnNBmdDoiap6uBQkNjNaSAhyTqgPbG6swps43hbcrnIoPq0fmFPMwICPuYofUNohmi7ysZAC1NGSb3I4SG7uZBLAZDZD')
 WIT_AI_TOKEN = os.environ.get('WIT_AI_TOKEN')
 
