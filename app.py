@@ -45,13 +45,15 @@ def get_wit_response(text):
     return resp.json()
 
 def generar_respuesta(wit_data):
-    # Aquí detectamos las intenciones (intents) que entrenarás en Wit.ai
+    # Esto imprimirá la respuesta de Wit.ai en la consola de Render para ayudarte a depurar
+    print("Datos recibidos de Wit.ai:", wit_data)
+    
     intents = wit_data.get('intents', [])
     if intents:
         top_intent = intents[0]['name']
         
-        # Ejemplos de intenciones comunes para calzado
-        if top_intent == 'precio':
+        # Asegúrate de que estos nombres sean EXACTAMENTE iguales a los de Wit.ai
+        if top_intent == 'consultar_precio':
             return "El precio de nuestras botas y zapatos varía según el modelo. ¿Buscas algún estilo en particular?"
         elif top_intent == 'ubicacion':
             return "Nos encontramos en San Francisco del Rincón, Guanajuato. ¡Será un gusto recibirte!"
